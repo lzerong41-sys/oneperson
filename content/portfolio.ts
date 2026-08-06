@@ -153,7 +153,7 @@ export const profile: Profile = {
     href: "/#workflow",
   },
   /** 替换为真实邮箱 */
-  email: "hello@example.com",
+  email: "2313114212@qq.com",
   /** 有简历时改为 /resume.pdf */
   resumeUrl: "/resume.pdf",
   /** 按实际填写 */
