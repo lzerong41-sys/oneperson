@@ -160,7 +160,7 @@ export const profile: Profile = {
   socials: [
     {
       label: "GitHub",
-      href: "https://github.com/",
+      href: "https://github.com/lzerong41-sys",
     },
   ],
 }
