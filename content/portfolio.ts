@@ -72,8 +72,8 @@ export type Project = {
   features: string[]
   /** AI 辅助开发流程 */
   aiWorkflow: { title: string; detail: string }[]
-  /** 页面展示占位（无真实截图时用文案占位） */
-  gallery: { label: string; caption: string }[]
+  /** 页面展示：有 src 则显示真实截图，否则用文案占位 */
+  gallery: { label: string; caption: string; src?: string }[]
   summary: string
 }
 
@@ -347,15 +347,18 @@ export const projects: Project[] = [
     gallery: [
       {
         label: "Dashboard 概览",
-        caption: "页面示意占位 · 待补充真实截图",
+        caption: "客户、产品、报价统计与快捷操作入口",
+        src: "/projects/quotepro/dashboard.png",
       },
       {
         label: "报价单编辑页",
-        caption: "页面示意占位 · 待补充真实截图",
+        caption: "客户、税率、行项目与自动合计",
+        src: "/projects/quotepro/quote-editor.png",
       },
       {
         label: "PDF 导出结果",
-        caption: "页面示意占位 · 待补充真实截图",
+        caption: "对外报价单版式与价税合计",
+        src: "/projects/quotepro/pdf-export.png",
       },
     ],
     summary:
