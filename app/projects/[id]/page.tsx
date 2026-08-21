@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
-import Image from "next/image";
 
+import { ProjectGallery } from "@/components/projects/project-gallery";
 import { Button } from "@/components/ui/button";
 import { getProjectById, projects } from "@/content/portfolio";
 
@@ -112,46 +112,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         </Section>
 
         <Section title="页面展示">
-          <div
-            className={
-              project.gallery.some((item) => item.src)
-                ? "grid gap-6"
-                : "grid gap-4 sm:grid-cols-2"
-            }
-          >
-            {project.gallery.map((item) =>
-              item.src ? (
-                <figure
-                  key={item.label}
-                  className="overflow-hidden rounded-lg border border-line bg-bg-elevated"
-                >
-                  <Image
-                    src={item.src}
-                    alt={item.label}
-                    width={1600}
-                    height={900}
-                    className="h-auto w-full"
-                  />
-                  <figcaption className="border-t border-line px-4 py-3">
-                    <p className="text-sm font-medium text-fg">{item.label}</p>
-                    <p className="mt-1 font-mono text-xs text-fg-muted">
-                      {item.caption}
-                    </p>
-                  </figcaption>
-                </figure>
-              ) : (
-                <div
-                  key={item.label}
-                  className="flex min-h-40 flex-col justify-between rounded-lg border border-line bg-bg-elevated p-5"
-                >
-                  <p className="text-sm font-medium text-fg">{item.label}</p>
-                  <p className="mt-6 font-mono text-xs text-fg-muted">
-                    {item.caption}
-                  </p>
-                </div>
-              ),
-            )}
-          </div>
+          <ProjectGallery items={project.gallery} />
         </Section>
 
         <Section title="项目总结" isLast>
