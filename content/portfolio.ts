@@ -72,8 +72,10 @@ export type Project = {
   features: string[]
   /** AI 辅助开发流程 */
   aiWorkflow: { title: string; detail: string }[]
-  /** 页面展示：有 src 则显示真实截图，否则用文案占位 */
+  /** 页面或产出展示：有 src 则显示真实截图，否则用文案占位 */
   gallery: { label: string; caption: string; src?: string }[]
+  /** 默认「页面展示」；工作流类项目可改为「工作流产出」 */
+  galleryTitle?: string
   summary: string
 }
 
@@ -408,18 +410,27 @@ export const projects: Project[] = [
           "保留 V1 作为证据，按审核问题重做事实表与新图。内容终审通过后，仍如实记录画布比例未按规划输出，不伪装修复。",
       },
     ],
+    galleryTitle: "工作流产出",
     gallery: [
       {
-        label: "热点选题与来源留存",
-        caption: "页面示意占位 · 待补充真实截图",
+        label: "Cursor 被 SpaceX 收购",
+        caption: "V2 成品图卡 · 发布前内容终审通过",
+        src: "/projects/ai-hotspot/cursor-spacex-v2.png",
       },
       {
-        label: "图文成品与发布文案",
-        caption: "页面示意占位 · 待补充真实截图",
+        label: "GLM-5.3 网络安全",
+        caption: "V2 成品图卡 · 发布前内容终审通过",
+        src: "/projects/ai-hotspot/glm-53-security-v2.png",
       },
       {
-        label: "审核标准与 V2 复盘",
-        caption: "页面示意占位 · 待补充真实截图",
+        label: "Qwen3.8 开放权重",
+        caption: "V2 成品图卡 · 发布前内容终审通过",
+        src: "/projects/ai-hotspot/qwen38-open-source-v2.png",
+      },
+      {
+        label: "Claude 文本水印",
+        caption: "V2 成品图卡 · 发布前内容终审通过",
+        src: "/projects/ai-hotspot/claude-watermark-v2.png",
       },
     ],
     summary:

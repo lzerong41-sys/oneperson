@@ -50,7 +50,13 @@ export function ProjectGallery({ items }: { items: GalleryItem[] }) {
 
   return (
     <>
-      <div className={hasImages ? "grid gap-6" : "grid gap-4 sm:grid-cols-2"}>
+      <div
+        className={
+          hasImages
+            ? "grid gap-6 sm:grid-cols-2"
+            : "grid gap-4 sm:grid-cols-2"
+        }
+      >
         {items.map((item, index) =>
           item.src ? (
             <figure

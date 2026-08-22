@@ -111,7 +111,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           </ol>
         </Section>
 
-        <Section title="页面展示">
+        <Section title={project.galleryTitle ?? "页面展示"}>
           <ProjectGallery items={project.gallery} />
         </Section>
 
