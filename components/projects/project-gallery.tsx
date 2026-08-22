@@ -68,7 +68,7 @@ export function ProjectGallery({ items }: { items: GalleryItem[] }) {
                   alt={item.label}
                   width={1600}
                   height={900}
-                  className="h-auto w-full"
+                  className="mx-auto h-auto max-h-[28rem] w-auto max-w-full object-contain"
                 />
               </button>
               <figcaption className="border-t border-line px-4 py-3">

@@ -289,15 +289,18 @@ export const projects: Project[] = [
     gallery: [
       {
         label: "商品管理页",
-        caption: "页面示意占位 · 待补充真实截图",
+        caption: "商品列表、编辑基础信息，规格独立维护",
+        src: "/projects/festival-wholesale/products.png",
       },
       {
         label: "库存与订单页",
-        caption: "页面示意占位 · 待补充真实截图",
+        caption: "订单详情、采购进度与到店自提",
+        src: "/projects/festival-wholesale/inventory-orders.png",
       },
       {
         label: "业务主路径",
-        caption: "页面示意占位 · 待补充真实截图",
+        caption: "商品详情 → 采购清单 → 订单中心",
+        src: "/projects/festival-wholesale/main-path.jpg",
       },
     ],
     summary:
